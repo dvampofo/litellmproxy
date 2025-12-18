@@ -21,3 +21,9 @@ curl --location 'http://0.0.0.0:4000/chat/completions' \
         }
     ]
 }'
+
+# Functioning curl command
+curl -X POST 'http://localhost:4000/v1/chat/completions' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer << LITELLM_MASTER_KEY >>' \
+  -d '{"model":"mistral","messages":[{"role":"user","content":"Hello!"}]}'
